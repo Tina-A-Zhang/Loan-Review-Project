@@ -2,7 +2,7 @@ import pickle
 from tensorflow.keras.models import load_model
 
 # Load your h5 model
-model = load_model("your_model.h5")
+model = load_model("trained_model.h5")
 
 # Save as pickle
 with open("model.pkl", "wb") as f:
