@@ -1,18 +1,10 @@
-import tensorflow as tf
-import numpy as np
+import pickle
+from tensorflow.keras.models import load_model
 
+# Load your h5 model
+model = load_model("your_model.h5")
 
-model = tf.keras.models.load_model("trained_model.h5")
-print("✅ Model loaded successfully!")
-
-
-model.summary()
-
-
-dummy_input = np.random.random((1, model.input_shape[1]))
-pred = model.predict(dummy_input)
-print("Prediction output:", pred)
-
-
-model.save("your_model_full.h5")
-print("✅ Model saved as your_model_full.h5")
+# Save as pickle
+with open("model.pkl", "wb") as f:
+    pickle.dump(model, f)
+print("✅ Model converted to model.pkl")
