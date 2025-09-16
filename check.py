@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 
-model = tf.keras.models.load_model("your_model.h5")
+model = tf.keras.models.load_model("trained_model.h5")
 print("✅ Model loaded successfully!")
 
 
